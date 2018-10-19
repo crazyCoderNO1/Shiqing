@@ -7,9 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ItemViewController.h"
+#import "TextViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+{
+    UITableView *tableView;
+    NSArray *shiList;
+    NSArray *ciList;
+    NSArray *quList;
+    NSArray *fuList;
+    NSMutableArray *searchResults;
+    NSMutableArray *sectionTitles;
+    NSString *sourcePath;
+}
 
+extern UISearchBar *searchBar;
+extern ItemViewController *itemView;
+extern TextViewController *textView;
 
 @end
 
